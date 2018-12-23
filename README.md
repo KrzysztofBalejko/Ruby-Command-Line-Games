@@ -16,7 +16,7 @@ Please take time to get yourself familiar with projects first (see below)
 
 ## Bash users
 
-Please note some of this little apps will perform slightly better in PoweShell.
+Please note some of those little apps will perform slightly better in PowerShell.
 
 You can still go ahead using bash though. Have fun!
 
@@ -33,7 +33,7 @@ Program will print a horizontal bar graph of the numbers in order.
 Black Jack is a program that will ask the user either to enter 'hit' or 'stick'
 On 'hit' new card is randomly allocated and stored in user's array(hand) of cards.
 Each of the cards has different point value.
-On 'stick' the scored is being displayed.
+On 'stick' the score is being displayed.
 The score depends on the cards user is holding in hand.
 
 *Numbers Converter*
@@ -45,7 +45,7 @@ Program will convert your numbers to words ie.:
 
 *People Into Groups*
 
-Program will puts people into groups.  It will:
+Program will put people into groups.  It will:
 - Ask the user to enter the number of groups they want to create.
 - Ask for people's names, one at a time, until the user enters `stop`.
 - Ask the user for the number of a group.
@@ -91,19 +91,19 @@ This awesome little program will allow you to create your own website template f
 
 User will be able to:
 - Create a new project and give his website a title
-- Create up to 3 separate sections and edit each of them indyvidually adding separate headings and paragraphs
-- Create a navbar, footer and optional sidebar
+- Create up to 3 separate sections and edit each of them individually adding separate headings and paragraphs
+- Create a navbar, footer and an optional sidebar
 - Program will take care of html and css mark-up
 - At the end program will produce index.html file with user's website
 
 *Who Wants To Be A Millionaire*
 
-Another quiz based on popular TV show.
+Another quiz based on a popular TV show.
 
 Program will as questions and give a player 4 possible answers.
-If the correct answer is given the player will be rewared.
+If the correct answer is given, the player will be rewarded.
 If not it's a game over.
-To win a game player must get to one million answering all the questions correctly.
+To win the game player must get to one million answering all the questions correctly.
 
 *Your ATM*
 
