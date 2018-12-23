@@ -332,7 +332,6 @@ puts " ", "Sidebar is a small box which you can use ie. to cite your favourite a
 end
 
 class Footer < Website
-
   system('cls')
   puts " ","Excellent! Time to wrap up our markup and edit out footer."
   puts " ","Your footer will be a long section at the very bottom of the page."

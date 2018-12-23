@@ -1,9 +1,8 @@
 def save_score
-
-    time = Time.new
-    save_score = File.new "scores.txt", "w"
-    File.open "scores.txt", "r+" do |file|
-    file.write("Player 1 #{$points} " + time.inspect)
+  time = Time.new
+  save_score = File.new "scores.txt", "w"
+  File.open "scores.txt", "r+" do |file|
+    file.write("Player 1 #{@points} " + time.inspect)
     file.close()
   end
 end
@@ -11,9 +10,9 @@ end
 def save_it
 
   puts " ", "Do you want to save your score ? [Yes/No]", " "
-  $save = gets.chomp.downcase
+  @save = gets.chomp.downcase
   system('cls')
-  if $save == "yes"
+  if @save == "yes"
     save_score
       puts " ", "Your record has been saved"
       puts " ", "Press enter to play again or Ctrl + C to quit the quiz"
@@ -28,7 +27,7 @@ end
 
 def start
 
-$points = 0
+@points = 0
 
 questions = {
 "Who is Luke Skywalker’s dad?" => "Anakin Skywalker",
@@ -52,7 +51,7 @@ questions = {
       puts ["Press enter to continue", "Click enter to move on to another question"].sample
         gets.chomp()
       system('cls')
-      $points += 1
+      @points += 1
     else
       puts " ","wrong answer !"," "
       puts ["Press enter to continue", "Click enter to move on to another question"].sample
@@ -61,17 +60,17 @@ questions = {
     end
   end
 
-  case $points
+  case @points
     when 0..2
-      puts " ", "You did poorly and scored only #{$points}/10 points", " "
+      puts " ", "You did poorly and scored only #{@points}/10 points", " "
       save_it
         start
     when 3..5
-      puts " ", "You did ok but scored only #{$points}/10 points", " "
+      puts " ", "You did ok but scored only #{@points}/10 points", " "
       save_it
         start
     when 6..9
-      puts " ", "Well done you got #{$points}/10 points", " "
+      puts " ", "Well done you got #{@points}/10 points", " "
       save_it
         start
     when 10

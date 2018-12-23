@@ -1,6 +1,5 @@
 def numbers_converter(number)
 
-#Storing values in 3 separate hashes
 hash1 = { "0" => "zero", "1" => "one", "2" => "two", "3" => "three",
 "4" => "four", "5" => "five", "6" => "six", "7" => "seven", "8" => "eight",
 "9" => "nine" }
@@ -11,7 +10,6 @@ hash3 = { "20" => "twenty", "30" => "thirty", "40" => "fourty",
 "50" => "fifty", "60" => "sixty", "70" => "seventy",
 "80" => "eighty", "90" => "ninety", "100" => "hundred" }
 
-# Logic
   if number.length == 1
     print hash1[number]
   elsif number.length == 2 && number[0] == "1"
@@ -29,7 +27,12 @@ hash3 = { "20" => "twenty", "30" => "thirty", "40" => "fourty",
   else
     print "Please enter only numbers between 0 to 100 in string format"
   end
-
 end
 
-numbers_converter("13") #Please enter numbers between 0 to 100 in string format
+
+puts "Welcome to my numbers converter", " "
+puts "Please enter only numbers between 0 to 100: "
+choice = gets.chomp()
+
+numbers_converter(choice)
+puts " "

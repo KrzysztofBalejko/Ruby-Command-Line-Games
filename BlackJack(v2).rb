@@ -1,7 +1,6 @@
 # hit - will move a random card to your hand and display score
 # stick - will exit the game
 
-
 def random_card
   cards = ["two", "three", "four", "five", "six", "seven",
            "eight", "nine", "ten",

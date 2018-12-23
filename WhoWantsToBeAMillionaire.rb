@@ -30,7 +30,6 @@ class Question
   end
 
   def you_win
-
     puts " "
     puts "Congratulations! You are a millionaire!"
     puts " "
