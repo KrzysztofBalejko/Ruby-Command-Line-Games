@@ -5,27 +5,28 @@ def atm(value)
 @allowed_currencies = ["RUB", "EUR", "UAH", "USD", "CUP", "SOS"]
 requested = value.match(/\d{1,4}/).to_s.to_i
 check = requested.to_s.chars.map(&:to_i).last
+val = VALUES.values.flatten
 
-if check % VALUES.values.flatten[0] != 0
-  puts "Can't do #{check} #{@currency}. Value must be divisible by #{VALUES.values.flatten[0]}!"
+if check % val[0] != 0
+  puts "Can't do #{check} #{@currency}. Value must be divisible by #{val[0]}!"
   exit()
-elsif check % VALUES.values.flatten[0] == 0
+elsif check % val[0] == 0
 count = -1
 @array = []
 new = requested
 while new > 0 do
-if new >= VALUES.values.flatten[count] && (new - VALUES.values.flatten[count]) >= VALUES.values.flatten[count]
-  new = new - VALUES.values.flatten[count] - VALUES.values.flatten[count]
-  @array << VALUES.values.flatten[count] << VALUES.values.flatten[count]
-elsif new > VALUES.values.flatten[count]
-  new = new - VALUES.values.flatten[count]
-  @array << VALUES.values.flatten[count]
+if new >= val[count] && (new - val[count]) >= val[count]
+  new = new - val[count] - val[count]
+  @array << val[count] << val[count]
+elsif new > val[count]
+  new = new - val[count]
+  @array << val[count]
   count -= 1
-elsif new < VALUES.values.flatten[count] && new > VALUES.values.flatten[count-1]
-  new = new - VALUES.values.flatten[count-1]
-  @array << VALUES.values.flatten[count-1]
+elsif new < val[count] && new > val[count-1]
+  new = new - val[count-1]
+  @array << val[count-1]
   count -= 1
-elsif new < VALUES.values.flatten[count]
+elsif new < val[count]
   count -= 1
 else
     @array << new
