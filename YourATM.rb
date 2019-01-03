@@ -1,8 +1,13 @@
-VALUES = { "YOUR_CURRENCY" => [5, 10, 20, 50, 100, 200, 500] }
+puts "Please enter the amount you wish to withdraw followed by currency:"
+amount = gets.chomp.to_s
+
+
+VALUES = { "GBP" => [5, 10, 20, 50] }
+# More currencies to be added
 
 def atm(value)
 @currency = value.match(/[a-zA-Z]{3}/).to_s.upcase
-@allowed_currencies = ["RUB", "EUR", "UAH", "USD", "CUP", "SOS"]
+@allowed_currencies = ["GBP", "EUR", "UAH", "USD", "CUP", "SOS"]
 requested = value.match(/\d{1,4}/).to_s.to_i
 check = requested.to_s.chars.map(&:to_i).last
 val = VALUES.values.flatten
@@ -46,4 +51,6 @@ hash = @array.inject(Hash.new(0)){ |h, e| h[e] += 1 ; h }
   end
  end
 
-atm("USD 1035")
+puts "Here's your money: "
+
+atm(amount)
