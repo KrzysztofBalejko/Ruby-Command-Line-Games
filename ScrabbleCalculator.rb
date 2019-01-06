@@ -15,3 +15,31 @@ separate.each do |letter|
 end
 
 puts array.reduce(:+).to_s
+
+
+# Alternative version:
+
+=begin
+@words = [{1 => ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"]},
+{2 => ["D", "G"]},
+{3 => ["B","C","M","P"]},
+{4 => ["F","H","V","W","Y"]},
+{5 => ["K"]},
+{8 => ["J", "X"]},
+{10 => ["Q", "Z"]}]
+
+def points(word)
+  score = 0
+  array = word.chars
+  array.map do |letter|
+    @words.each do |e|
+      if e.values.flatten.include?(letter)
+        score = score + e.keys.reduce(:+)
+      end
+    end
+  end
+  puts score
+end
+
+points("ANYWORDANYDAY")
+=end
